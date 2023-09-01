@@ -643,3 +643,49 @@ Traceback (most recent call last):
   File "D:\joki\djangoProject\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'khs_detail' with keyword arguments '{'mahasiswa_id': ''}' not found. 1 pattern(s) tried: ['khs/(?P<mahasiswa_id>[0-9]+)/\\Z']
+Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\joki\djangoProject\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\joki\djangoProject\sistem_informasi\dashboard\views.py", line 35, in index
+    return render(request, 'dashboard.html', context)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\base.py", line 173, in render
+    with context.bind_template(self):
+  File "C:\Program Files\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\context.py", line 254, in bind_template
+    updates.update(processor(self.request))
+TypeError: 'SecurityMiddleware' object is not iterable
+Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\joki\djangoProject\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "D:\joki\djangoProject\sistem_informasi\dashboard\views.py", line 35, in index
+    return render(request, 'dashboard.html', context)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\base.py", line 173, in render
+    with context.bind_template(self):
+  File "C:\Program Files\Python39\lib\contextlib.py", line 119, in __enter__
+    return next(self.gen)
+  File "D:\joki\djangoProject\env\lib\site-packages\django\template\context.py", line 254, in bind_template
+    updates.update(processor(self.request))
+TypeError: 'WhiteNoiseMiddleware' object is not iterable
