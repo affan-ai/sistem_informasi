@@ -15,7 +15,7 @@ class AbsenForm(forms.ModelForm):
     dosen = forms.ModelChoiceField(queryset=DosenPengajarModel.objects.all(),
                                    widget=forms.HiddenInput()) 
 
-    kehadiran = forms.ChoiceField(choices=pilihan_kehadiran)
+    kehadiran = forms.ChoiceField(choices=pilihan_kehadiran, required= 'required')
     mahasiswa = forms.CharField(widget=forms.TextInput(attrs={'type': 'hidden'}))
     mata_kuliah = forms.CharField(widget=forms.TextInput(attrs={'type': 'hidden'}))
 
