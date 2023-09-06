@@ -68,7 +68,7 @@ def input_absen(request, id):
         try:
             mata_kuliah_terpilih = MataKuliah.objects.get(id=id)
             # Dapatkan semua mahasiswa yang mengambil mata kuliah ini dan sudah disetujui
-            mahasiswa_mengambil = KRS.objects.filter(mata_kuliah=mata_kuliah_terpilih, status='disetujui')
+            mahasiswa_mengambil = KRS.objects.filter(mata_kuliah__contains=mata_kuliah_terpilih, status='disetujui')
         except MataKuliah.DoesNotExist:
             pass
 

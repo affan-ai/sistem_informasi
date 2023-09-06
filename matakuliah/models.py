@@ -1,7 +1,7 @@
 # models.py
 from django.db import models
 from dosen_pengajar.models import DosenPengajarModel
-
+from krs.models import KRS
 
 class MataKuliah(models.Model):
 
@@ -29,6 +29,8 @@ class MataKuliah(models.Model):
     kelas = models.CharField(max_length=100, default="A")
     nama_pengajar = models.ForeignKey(
         DosenPengajarModel, on_delete=models.CASCADE, related_name='mata_kuliah_list')
+    krs = models.ManyToManyField(KRS, related_name='mata_kuliah_set')
+
 
     def __str__(self):
         return self.nama_mata_kuliah
